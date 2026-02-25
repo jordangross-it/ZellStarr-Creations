@@ -38,6 +38,15 @@ h3 {
     margin-bottom: 30px
 }
 
+#hamburger-icon {
+    display: none;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    line-height: 1;
+}
+
 nav {
     display: flex;
     align-self: center;
@@ -450,6 +459,63 @@ button:hover {
         font-size: 20px;
     }
 
+    #nav a {
+        display: none;
+    }
+
+    #hero nav.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        bottom: auto;
+        left: 0;
+        width: 100%;
+        max-width: none;
+        background-color: #f5f5f594;
+        border-radius: 0;
+        z-index: 1000;
+    }
+
+    #hero nav.open a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #hero nav {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        left: auto;
+        bottom: auto;
+        transform: none;
+        background-color: transparent;
+        display: block;
+        max-width: 200%;
+        z-index: 100;
+    }
+
+    #hamburger-icon {
+        display: block;
+        text-align: right;
+    }
+
+    #hero nav a {
+        display: none;
+        background-color: rgba(34, 147, 75, 0.95);
+        color: white;
+        text-align: center;
+        border-bottom: 1px solid rgba(215, 253, 205, 0.1);
+    }
+
+    nav.open a {
+        display: flex;
+        border-radius: 6px;
+        width: 80%;
+    }
+
     #main-text,
     #main3-text,
     form {
@@ -500,7 +566,7 @@ button:hover {
 }
 
 @media (max-width: 600px) {
-    .nav>a {
+    nav>a {
         flex: 1 1 100%;
         text-align: center;
         padding: 12px 0;
