@@ -371,6 +371,7 @@ button:hover {
 @media (max-width: 768px) {
     h1 {
         font-size: 44px;
+        font-weight: 900;
     }
 
     h2 {
@@ -501,6 +502,7 @@ button:hover {
 @media (max-width: 480px) {
     h1 {
         font-size: 32px;
+        font-weight: 900;
     }
 
     h2 {
