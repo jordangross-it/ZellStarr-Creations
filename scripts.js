@@ -1,4 +1,3 @@
-// 1. Standardize imports to use the CDN for everything
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 import {
@@ -19,15 +18,13 @@ const firebaseConfig = {
   measurementId: "G-542TEYBRND",
 };
 
-// 2. Initialize Firebase FIRST
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const db = getFirestore(app); // Pass 'app' into Firestore
+const db = getFirestore(app); 
 
 const grid = document.getElementById("builds-grid");
 
-// 3. Helper function to fix GitHub links on the fly
-// This automatically swaps 'blob' to 'raw' so your images actually show up!
 function getRawGitHubUrl(url) {
   return url
     .replace("github.com", "raw.githubusercontent.com")
@@ -48,8 +45,6 @@ function renderBuild(doc) {
   grid.innerHTML += card;
 }
 
-// Fetch Functions (Keeping your logic, it's solid!)
-// Fetch EVERYTHING
 async function fetchAllBuilds() {
   if (!grid) return;
 
