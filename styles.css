@@ -267,75 +267,79 @@ button:hover {
     transform: translateY(-2px);
 }
 
-.cover-image img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-.gallery a {
-    display: block;
-    overflow: hidden;
-    transition: transform 0.2s ease;
-}
-
-.gallery a:hover {
-    transform: scale(1.05);
-}
-
-.gallery img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-}
-
-/* Lightbox overlay */
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(20, 139, 64, 0.544);
-    border-radius: 30px;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.lightbox:target {
+.filters {
     display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    box-shadow: 0 0 20px rgba(20, 139, 64, 0.2);
+.filters button {
+    margin: 0;
+    padding: 10px 25px;
+    width: auto;
 }
 
-/* Close button */
-.lightbox a {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: #fff;
-    font-size: 2em;
-    text-decoration: none;
-    font-weight: bold;
+.loading-text {
+    font-family: 'Poppins', sans-serif;
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #166433;
+    padding: 40px;
+    font-style: italic;
 }
 
-.build-desc {
-    padding-top: 50px;
+.error-text {
+    font-family: 'Poppins', sans-serif;
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #b71c1c;
+    padding: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.build-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid #73cb93;
+    box-shadow: 0 4px 8px rgba(20, 139, 64, 0.2);
+    padding-bottom: 15px;
+}
+
+.build-card img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.build-card:hover {
+    transform: translateY(-5px);
+}
+
+.build-card h3 {
+    font-family: 'Poppins', sans-serif;
+    margin: 15px;
+    font-size: 1.2rem;
+}
+
+.tag-badge {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 15px;
+    padding: 4px 10px;
+    background: #22934b;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: white;
 }
 
 @media (max-width: 1024px) {
@@ -389,7 +393,7 @@ button:hover {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 0px;
         bottom: auto;
         left: 0;
         width: 100%;
@@ -426,9 +430,10 @@ button:hover {
 
     #hero nav a {
         display: none;
-        background-color: rgba(34, 147, 75, 0.95);
+        background-color: rgba(4, 163, 62, 0.746);
         color: white;
         text-align: center;
+        border-radius: 0px;
         border-bottom: 1px solid rgba(215, 253, 205, 0.1);
     }
 
@@ -512,6 +517,15 @@ button:hover {
 
     .rightSd img {
         max-width: 100%;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     #backToTop {

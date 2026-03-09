@@ -7,13 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon3.png">
 
     <script src="https://kit.fontawesome.com/3fa12e31f9.js" crossorigin="anonymous"></script>
-    <script src="scripts.js" defer></script>
+    <script src="scripts.js" type="module" defer></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -38,65 +38,24 @@
         <div class="cardMain">
             <h2><i class="fa-solid fa-house"></i> Build Showcase</h2>
             <div class="main-text">
-                <p>Presenting my newest build in The Sims 4! Each month, I showcase one of my latest creations here for
+                <p>Presenting my builds in The Sims 4! Each month, I showcase some of my latest creations here for
                     you
                     to
-                    explore. This build is available to download now on The Sims 4 Gallery—check it out and make it part
+                    explore. These builds are available to download now on The Sims 4 Gallery—check it out and make it
+                    part
                     of
                     your
                     world!
                 </p>
-            </div>
-            <br>
+            </div><br>
 
-            <div class="cover-image"><a href="#imgEX"><img src="images/Exterior.png" alt="Exterior view of build"></a>
-            </div>
-
-            <div class="gallery">
-                <a href="#img1"><img src="images/Entertainment1.png" alt="Photo 1"></a>
-                <a href="#img2"><img src="images/Entertainment2.png" alt="Photo 2"></a>
-                <a href="#img3"><img src="images/LoungeUp.png" alt="Photo 3"></a>
-                <a href="#img4"><img src="images/Bedroom.png" alt="Photo 4"></a>
+            <div class="filters">
+                <button id="filter-all">All</button>
+                <button id="filter-lounge">Lounges</button>
+                <button id="filter-home">Homes</button>
             </div>
 
-            <!-- Lightbox sections -->
-            <div id="imgEX" class="lightbox">
-                <a href="#">&times;</a>
-                <img src="images/Exterior.png" alt="Photo EX">
-            </div>
-
-            <div id="img1" class="lightbox">
-                <a href="#">&times;</a>
-                <img src="images/Entertainment1.png" alt="Photo 1">
-            </div>
-
-            <div id="img2" class="lightbox">
-                <a href="#">&times;</a>
-                <img src="images/Entertainment2.png" alt="Photo 2">
-            </div>
-
-            <div id="img3" class="lightbox">
-                <a href="#">&times;</a>
-                <img src="images/LoungeUp.png" alt="Photo 3">
-            </div>
-
-            <div id="img4" class="lightbox">
-                <a href="#">&times;</a>
-                <img src="images/Bedroom.png" alt="Photo 4">
-            </div>
-
-            <div class="build-desc">
-                <h2><i class="fa-solid fa-info-circle"></i> Description</h2>
-
-                <p>Welcome to <strong style="color: #008f18;">Landgraab Landing</strong>, a bar for Oasis Springs that
-                    is,
-                    in my head, owned by the Landgraab family,
-                    specifically Malcom. It has themes of space as well as a collection of artifacts. Here, your sims
-                    can
-                    enjoy the
-                    the best that the Oasis Springs bar scene has to offer: luxury, enjoyment, and artistic-vigor.</p>
-            </div>
-        </div>
+            <div id="builds-grid" class="grid-container"></div>
     </section>
 
     <button id="backToTop" title="Go to top">
