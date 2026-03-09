@@ -21,7 +21,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const db = getFirestore(app); 
+const db = getFirestore(app);
 
 const grid = document.getElementById("builds-grid");
 
@@ -120,6 +120,9 @@ document.getElementById("filter-all").addEventListener("click", fetchAllBuilds);
 document
   .getElementById("filter-lounge")
   .addEventListener("click", () => fetchByTag("Lounge"));
-  document
+document
   .getElementById("filter-home")
   .addEventListener("click", () => fetchByTag("Home"));
+  document
+  .getElementById("filter-gym")
+  .addEventListener("click", () => fetchByTag("Gym"));
